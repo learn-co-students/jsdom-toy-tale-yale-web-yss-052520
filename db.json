@@ -22,7 +22,7 @@
       "id": 4,
       "name": "Slinky Dog",
       "image": "https://www.freeiconspng.com/uploads/slinky-png-transparent-1.png",
-      "likes": 4
+      "likes": 8
     },
     {
       "id": 5,
@@ -46,7 +46,13 @@
       "id": 8,
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
-      "likes": -2
+      "likes": 4
+    },
+    {
+      "name": "James Schoen",
+      "image": "https://lh3.googleusercontent.com/proxy/wj_IaWJjC3hY4wJ5MDlOGLT80S-tKinPiO5j8_0ZhZzJqHbqblFP2dWmpxBTZIcG1BitoDkwI_IsggMndRput7gpNudFRSkCnkA2QAg0CdN4DPmJj5MynP55gafIlbAjAwhzdFQ_P_K0hF80ZtgTnKE",
+      "likes": 4,
+      "id": 11
     }
   ]
 }
