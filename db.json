@@ -4,13 +4,13 @@
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 5
+      "likes": 7
     },
     {
       "id": 2,
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 8
+      "likes": 17
     },
     {
       "id": 3,
@@ -47,6 +47,33 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "DJ",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fdog%2F&psig=AOvVaw2Myr9aUdEeS1pW0FfZ8-8W&ust=1594412176849000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJj8j6z-wOoCFQAAAAAdAAAAABAD",
+      "id": 9
+    },
+    {
+      "name": "DJ",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fdog%2F&psig=AOvVaw2Myr9aUdEeS1pW0FfZ8-8W&ust=1594412176849000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJj8j6z-wOoCFQAAAAAdAAAAABAD",
+      "id": 10
+    },
+    {
+      "name": "DJ",
+      "image": "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "id": 11
+    },
+    {
+      "name": "Duke",
+      "image": "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "likes": 0,
+      "id": 12
+    },
+    {
+      "name": "Duke",
+      "image": "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "likes": 0,
+      "id": 13
     }
   ]
 }
