@@ -47,6 +47,12 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": 2
+    },
+    {
+      "name": "Barbie",
+      "image": "https://target.scene7.com/is/image/Target/GUEST_103fba94-ffb0-4a6e-b239-5953be134da9?wid=488&hei=488&fmt=pjpeg",
+      "likes": 2,
+      "id": 9
     }
   ]
 }
