@@ -25,9 +25,9 @@ function add_toys(toys){
 }
 
 function add_toy(toy){
-  const d = document.querySelector("#toy-collection")
-  const div = document.createElement("div")
-  div.classList.add("card")
+  const toys_div = document.querySelector("#toy-collection")
+  const toy_div = document.createElement("div")
+  toy_div.classList.add("card")
   const h2 = document.createElement("h2")
   h2.innerText = toy.name
   const image = document.createElement("img")
@@ -35,23 +35,23 @@ function add_toy(toy){
   image.classList.add("toy-avatar")
   const p = document.createElement("p")
   p.innerText = `${toy.likes} Likes `
-  const btn = document.createElement("botton")
+  const btn = document.createElement("button")
   btn.classList.add("like-btn")
   btn.innerText = "Like <3"
-  btn.addEventListener("click", (e) => {
+  btn.addEventListener("click", () => {
     // console.log("clicked!") 
 
-    add_likes(toy)
-    e.preventDefault()
+    add_likes(toy, p)
   })
 
-  div.append(h2, image, p, btn)
-  d.append(div)
+  toy_div.append(h2, image, p, btn)
+  toys_div.append(toy_div)
 }
 
-function add_likes (toy){
+function add_likes (toy, p){
+  let new_number = parseInt(p.innerText.split(" ")[0], 10) + 1
   let formData = {
-    likes: toy.likes + 1
+    likes: new_number
   };
   let configObj = {
     method: "PATCH",
@@ -63,11 +63,16 @@ function add_likes (toy){
   };  
 
   fetch(`http://localhost:3000/toys/${toy.id}`, configObj)
-  .then(function(response) {
-      response.json();
-  }).then(
-    console.log
-  );
+  .then(
+    res => res.json()
+  ).then(
+    function(json) {
+      console.log(json.likes)
+      p.innerText = `${json.likes} Likes`
+  }
+  )
+
+  // );
 }
 
 
@@ -76,9 +81,11 @@ let f = document.querySelector(".add-toy-form")
 
 f.addEventListener("submit", function(e){
   e.preventDefault()
+  let name = f.elements[0].value
+  let image = f.elements[1].value
   let formData = {
-    name: f.elements[0].value,
-    image: f.elements[1].value,
+    name,
+    image,
     likes: 0
   };
   let configObj = {
@@ -93,6 +100,8 @@ f.addEventListener("submit", function(e){
   fetch("http://localhost:3000/toys", configObj)
       .then(function(response) {
           return response.json();
-      }).then(console.log);
+      }).then(function(obj){
+        add_toy(obj)
+      });
     
 })
