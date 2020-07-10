@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showToy(toy){
     const div = ce("div")
-    div.class = "card"
+    div.className = "card"
     div.style.border = "1px solid"
 
     const h2 = ce("h2")
@@ -59,19 +59,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const img = ce("img")
     img.src = toy.image
+    img.className = "toy-avatar"
 
-    const likes = ce("p")
-    likes.innerText = `${toy.likes} likes`
+    const p = ce("p")
+    p.innerText = `${toy.likes} likes`
 
     const btn = ce("button")
     btn.innerText = "Like <3"
     btn.class = "like-btn"
 
 
-    btn.addEventListener("click", function(){addLike(toy)})
+    btn.addEventListener("click", () => {
+      
+      let configObj = {
+        method: "PATCH",
+        headers: {"Content-Type": "application/json", Accept: "application/json"},
+        body: JSON.stringify({
+          likes: toy.likes + 1
+        })
+      }
+
+      fetch(`http://localhost:3000/toys/${toy.id}`, configObj)
+      .then(res => res.json())
+      .then(updatedToy => {
+        p.innerText = updatedToy.likes + " Likes"
+        toy = updatedToy
+      })
+
+    })
     
 
-    div.append(h2, img, likes, btn)
+    div.append(h2, img, p, btn)
 
     toyCollection.append(div)
 
@@ -89,12 +107,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       fetch(`http://localhost:3000/toys/${toy.id}`, configObj)
       .then(res => res.json())
-      .then(json => {
-        console.log(json)
-        likes.innerText = `${toy.likes + 1} likes`
-        debugger
-
+      .then(updatedToy => {
+        toy = updatedToy
+        likes.innerText = `${updatedToy.likes} likes`
       })
+
+      
+
+
       
       
     }
