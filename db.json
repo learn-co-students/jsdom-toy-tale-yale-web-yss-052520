@@ -4,13 +4,13 @@
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 34
+      "likes": 5
     },
     {
       "id": 2,
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 16
+      "likes": 8
     },
     {
       "id": 3,
@@ -47,24 +47,6 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
-    },
-    {
-      "name": "Oreo",
-      "image": "https://images.homedepot-static.com/productImages/a8f9eec2-02f2-4072-9b0a-cdb1a7fe3ebc/svn/multi-roommates-wall-decals-rmk1430gm-64_1000.jpg",
-      "likes": 0,
-      "id": 9
-    },
-    {
-      "name": "Oreo II",
-      "image": "https://images.homedepot-static.com/productImages/a8f9eec2-02f2-4072-9b0a-cdb1a7fe3ebc/svn/multi-roommates-wall-decals-rmk1430gm-64_1000.jpg",
-      "likes": 0,
-      "id": 10
-    },
-    {
-      "name": "Oreo000000",
-      "image": "https://images.homedepot-static.com/productImages/a8f9eec2-02f2-4072-9b0a-cdb1a7fe3ebc/svn/multi-roommates-wall-decals-rmk1430gm-64_1000.jpg",
-      "likes": 0,
-      "id": 11
     }
   ]
 }
