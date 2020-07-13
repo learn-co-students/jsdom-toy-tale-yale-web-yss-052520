@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(res => res.json())
     .then(newToy => {
-      appendToy(newToy)
+      createToy(newToy)
       toyForm.reset()
       addToy = !addToy
     })
